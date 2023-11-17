@@ -1,0 +1,37 @@
+/* Estilo geral para navegadores baseados em WebKit (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Largura da barra vertical */
+    height: 10px;
+    /* Altura da barra horizontal */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Cor de fundo */
+    border-radius: 10px;
+    /* Cantos arredondados */
+}
+
+/* Fundo da barra de rolagem quando mouse está sobre */
+::-webkit-scrollbar-track:hover {
+    background: #e8e8e8;
+}
+
+/* O "polegar" (a parte móvel) da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    /* Cor do polegar */
+    border-radius: 10px;
+    /* Cantos arredondados */
+}
+
+/* O "polegar" quando você passa o mouse sobre */
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb;
+}
+
+/* Estilo para Firefox
+scrollbar-color: #888 #f1f1f1;
+scrollbar-width: thin; */

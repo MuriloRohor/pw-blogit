@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if request.cookies["tema"]: %}
+    <link rel="stylesheet" href="/static/lib/bootstrap/bootstrap.min.{{request.cookies['tema']}}.css">
+    {% endif %}
+    <link rel="stylesheet" href="/static/lib/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="/static/css/scrollbar.css">
+    <title>{% block tittle %}{% endblock %}</title>
+</head>
+
+<body class="d-flex flex-column vh-100">
+    {% include "includes/navbar.html" %}
+    <main class="container mb-auto overflow-auto">
+        <div class="row">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    {% include "includes/footer.html" %}
+    <script src="/static/lib/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

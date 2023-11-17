@@ -1,0 +1,41 @@
+{% extends "base_arearestrita.html" %}
+
+{% block tittle %}BlogIt :: Alterar Senha{% endblock %}
+
+{% block restrito %}
+<div class="col-12">
+    <h1 class="display-6">Alterar Senha</h1>
+    <hr class="my-4">
+    <form method="post">
+        <div class="row g-4">
+            <div class="col-6">
+                <div class="form-floating">
+                    <input type="password" class="form-control " id="senhaAtual" name="senhaAtual" placeholder=" "
+                        required autofocus>
+                    <label for="senhaAtual">Senha Atual</label>
+                </div>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="form-floating">
+                    <input type="password" class="form-control " id="novaSenha" name="novaSenha" placeholder=" "
+                        required>
+                    <label for="novaSenha">Nova Senha</label>
+                </div>
+            </div>
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="form-floating">
+                    <input type="password" class="form-control " id="confNovaSenha" name="confNovaSenha" placeholder=" "
+                        required>
+                    <label for="confNovaSenha">Confirmação da Nova Senha</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <a href="/" class="btn btn-secondary me-2">Cancelar</a>
+                <button class="btn btn-primary" type="submit">Alterar Senha</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

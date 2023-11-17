@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block tittle %}BlogIt :: Contato{% endblock %}
+
+{% block content %}
+<div class="col-12">
+    <h1 class="display-6">Contato</h1>
+    <hr class="mt-3">
+    <p class="lead">
+        Preencha os campos a seguir e clique no botão "Enviar". Você receberá uma resposta de nossa equipe de suporte.
+    </p>
+    <form method="post" class="mb-3">
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control " id="nome" name="nome" placeholder=" " required autofocus
+                        value="">
+                    <label for="nome">Nome</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <input type="text" class="form-control " id="email" name="email" placeholder=" " required value="">
+                    <label for="email">E-mail</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <select class="form-select " id="assunto" name="assunto" required>
+                        <option value="" selected>Escolha uma opção...</option>
+                        <option value="1">Dúvidas</option>
+                        <option value="2">Sugestões</option>
+                        <option value="3">Reclamações</option>
+                        <option value="4">Erratas</option>
+                        <option value="5">Outros</option>
+                    </select>
+                    <label for="assunto">Assunto</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="form-floating">
+                    <textarea class="form-control " id="mensagem" name="mensagem" placeholder=" " style="height: 128px"
+                        required style='height:128px'></textarea>
+                    <label for="mensagem">Mensagem</label>
+
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

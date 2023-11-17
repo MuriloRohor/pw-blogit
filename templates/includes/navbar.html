@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg mb-3 p-3 bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <img src="/static/img/logo-dark.svg" alt="Logo" height="24" class="d-inline-block">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link {{ 'active text-success' if request.url.path == '/'}} " href="/">Principal</a>
+                <a class="nav-link {{ 'active text-success' if request.url.path == '/contato'}}"
+                    href="/contato">Contato</a>
+                <a class="nav-link {{ 'active text-success' if request.url.path == '/usuario/novo'}}"
+                    href="/usuario/novo">Criar Conta</a>
+                <a class="nav-link {{ 'active text-success' if request.url.path == '/usuario/login'}} "
+                    href="/usuario/login">Entrar</a>
+                <a class="nav-link {{ 'active text-success' if request.url.path == '/usuario/'}}" href="/usuario/">Área Restrita</a>
+                <a class="nav-link {{ 'active text-success' if request.url.path == '/usuario/logout'}}" href="/usuario/logout">Sair</a>
+            </div>
+        </div>
+    </div>
+</nav>

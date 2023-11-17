@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block tittle %}BlogIt :: Login{% endblock %}
+
+{% block content %}
+<div class="col-12">
+    <div class="row">
+        <div class="col-12 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xxl-4 offset-xxl-4">
+            <h1 class="display-6">Login</h1>
+            <hr class="mt-3">
+            <p class="lead">
+                Use suas credenciais para entrar na área restrita.
+            </p>
+            <form method="post" class="mb-5">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="text" class="form-control " id="email" name="email" placeholder=" " required
+                                autofocus value="">
+                            <label for="email">E-mail</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="password" class="form-control " id="senha" name="senha" placeholder=" "
+                                required value="">
+                            <label for="senha">Senha</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <a href="/" class="btn btn-secondary me-2">Voltar</a>
+                        <button class="btn btn-primary" type="submit">Entrar</button>
+                    </div>
+                </div>
+            </form>
+
+            <p class="small">Ainda não criou sua conta?<br>
+                <a href="/usuario/novo" class="text-decoration-none text-primary">Clique aqui</a> para criar uma conta
+                agora!
+            </p>
+
+            <p class="small">Esqueceu sua senha?<br>
+                <a href="/usuario/recsenha" class="text-decoration-none text-primary">Clique aqui</a> para recuperá-la.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

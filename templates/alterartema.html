@@ -1,0 +1,33 @@
+{% extends "base_arearestrita.html" %}
+
+{% block tittle %}BlogIt :: Alterar Tema{% endblock %}
+
+{% block restrito %}
+{% set tema = request.cookies["tema"] if request.cookies["tema"] else "" %}
+<div class="col-12">
+    <h1 class="display-6">Alterar Tema do Site</h1>
+    <hr class="my-4">
+    <form method="post">
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="form-floating">
+                    <select name="tema" id="tema" class="form-select" autofocus>
+                        <option value="default">Padrão</option>
+                        {% for t in temas: %}
+                        {% set selected = "selected" if tema == t|lower else "" %}
+                        <option value="{{t|lower}}" {{selected}}>{{t}}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="nome">Nome</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <div>
+                    <a href="/usuario" class="btn btn-secondary me-2">Cancelar</a>
+                    <button type="submit" class="btn btn-primary">Alterar Tema</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

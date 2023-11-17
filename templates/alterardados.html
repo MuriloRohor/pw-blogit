@@ -1,0 +1,46 @@
+{% extends "base_arearestrita.html" %}
+
+{% block tittle %}BlogIt :: Alterar Dados{% endblock %}
+
+{% block restrito %}
+<div class="col-12">
+    <h1 class="display-6">Alterar Dados Pessoais</h1>
+    <hr class="my-4">
+    <form method="post">
+        <div class="row g-4">
+            <div class="col-12 col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control " id="nome" name="nome" placeholder=" " required autofocus
+                        value="">
+                    <label for="nome">Nome</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-floating">
+                    <input type="date" class="form-control " id="dataNascimento" name="dataNascimento" placeholder=" "
+                        required value="">
+                    <label for="dataNascimento">Data de Nascimento</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-floating">
+                    <input type="email" class="form-control " id="email" name="email" placeholder=" " required value="">
+                    <label for="email">E-mail</label>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-floating">
+                    <input type="text" class="form-control " id="telefone" name="telefone" placeholder=" " required
+                        oninput='mascararTelefone(this)' value="">
+                    <label for="telefone">Telefone</label>
+                </div>
+            </div>
+            <div class="col-12">
+                <a href="/usuario" class="btn btn-secondary me-2">Cancelar</a>
+                <button class="btn btn-primary" type="submit">Alterar Dados</button>
+            </div>
+        </div>
+    </form>
+    <script src="/static/js/inputmasks.js"></script>
+</div>
+{% endblock %}

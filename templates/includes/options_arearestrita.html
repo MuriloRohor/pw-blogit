@@ -1,0 +1,9 @@
+<div class="btn-group-vertical w-100">
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/usuario/alterardados'}} " href="/usuario/alterardados">Alterar Dados Pessoais</a>
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/usuario/alterartema'}} " href="/usuario/alterartema">Alterar Tema do Site</a>
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/usuario/alterarsenha'}}" href="/usuario/alterarsenha">Alterar Senha de Acesso</a>
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/artigo/novo'}}" href="/artigo/novo">Criar Novo Artigo</a>
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/artigo/listagem'}}" href="/artigo/listagem">Ver Artigos Criados</a>
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/artigo/aprovar'}}" href="/artigo/aprovar">Aprovar Novos Artigos</a>
+    <a class="btn btn-outline-primary {{ 'active' if request.url.path == '/usuario/aprovar'}}" href="/usuario/aprovar">Aprovar Novos Usuários</a>
+</div>
